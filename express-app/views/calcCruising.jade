@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1="航続距離　計算"
+    form(method='post', action='/calcCruising', class='container')
+        p
+            | 換算
+            br
+            | ノット
+            input(type='text', name='knot' class='form-control col-2')
+            br
+            | 　↓
+            br
+            div(class='row col')
+                span(class='mx-2')
+                | 時速
+                input(type='text', disabled=true, class='form-control col-2 mx-2')
+                span(class='mx-2')
+                | × 燃料
+                input(type='text', name='fuel' class='form-control col-2 mx-2')
+                span(class='mx-2')
+                | ÷ 燃料消費量
+                input(type='text', name='fuelEconomy' class='form-control col-2 mx-2')
+        p
+            input(type='submit' value='送信する' class='btn btn-primary')
+    p
+        div(id='calc')=output1
+        div(id='result')=output2

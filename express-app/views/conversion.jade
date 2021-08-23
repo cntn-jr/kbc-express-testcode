@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1="ノット　換算"
+    form(method='post', action='/conversion')
+        p
+            | 換算
+            br
+            input(type='text', name='knot')
+        p
+            input(type='submit' value='送信する')
+    p
+        div(id='calc')=output1
+        div(id='result')=output2
