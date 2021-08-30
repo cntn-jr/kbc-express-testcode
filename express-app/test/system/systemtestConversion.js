@@ -5,7 +5,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 
 //  ノット変換テスト
-describe('Web システムテスト ノット', async ()=>{
+describe('Web システムテスト ノット変換', async ()=>{
     it('Access with GET Method return 200', async ()=>{
         request.get({url:'http://localhost:3000/conversion'}, function(err,response,body){
             assert.equal(response.statusCode, 200);
